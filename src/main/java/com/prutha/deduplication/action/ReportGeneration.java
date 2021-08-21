@@ -35,7 +35,7 @@ public class ReportGeneration {
 		fileInformations = getFileInformation();
 		dirSize = (float) fileInformations.stream().collect(Collectors.summingLong(report -> report.getFileSize()));
 		hashSize = (float) fileHashCRUD.getHashSize();
-		setDedupRatio( 1 - (hashSize / dirSize));
+		setDedupRatio(dirSize / hashSize);
 
 		Long totalProcessingTime = fileInformations.stream()
 				.collect(Collectors.summingLong(report -> report.getProcessingTime().getTime()));
