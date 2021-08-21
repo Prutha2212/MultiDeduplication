@@ -17,6 +17,6 @@ public class App
 		System.out.println("Total number of files: "+rg.getTotalFiles());
 		System.out.println("Total number of hash files: "+rg.getTotalHashFiles());
 		System.out.println("ThroughPut: "+rg.getThroughPut());
-		System.out.println("De-duplication ratio (%):"+rg.getDedupRatio()*100);
+		System.out.println("De-duplication ratio (%):"+rg.getDedupRatio());
 	}
 }
